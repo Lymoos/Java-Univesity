@@ -27,19 +27,20 @@ public class Circle extends GeometricObject {
         this.radius = radius;
     }
 
-    /** Возвращает площадь */
-    public double getArea() {
-        return radius * radius * Math.PI;
-    }
-
     /** Возвращает диаметр */
     public double getDiameter() {
         return 2 * radius;
     }
 
     /** Возвращает периметр */
+    @Override
+    public double getArea() {
+        return Math.PI * radius * radius;
+    }
+
+    @Override
     public double getPerimeter() {
-        return 2 * radius * Math.PI;
+        return 2 * Math.PI * radius;
     }
 
     /** Отображает информацию о круге */

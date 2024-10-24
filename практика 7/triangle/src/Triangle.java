@@ -1,4 +1,4 @@
-public class Triangle extends GeometricObject {
+public class Triangle extends GeometricObject{
     private double side1;
     private double side2;
     private double side3;
@@ -35,13 +35,13 @@ public class Triangle extends GeometricObject {
         return side3;
     }
 
-    /** Возвращает площадь треугольника */
+    @Override
     public double getArea() {
-        double s = (side1 + side2 + side3) / 2;
-        return Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
+        double s = getPerimeter() / 2; // Полупериметр
+        return Math.sqrt(s * (s - side1) * (s - side2) * (s - side3)); // Формула Герона
     }
 
-    /** Возвращает периметр треугольника */
+    @Override
     public double getPerimeter() {
         return side1 + side2 + side3;
     }

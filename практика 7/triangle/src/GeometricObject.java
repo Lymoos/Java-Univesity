@@ -1,4 +1,4 @@
-public class GeometricObject {
+public abstract class GeometricObject implements Comparable<GeometricObject>{
     private String color = "белый";
     private boolean filled;
     private java.util.Date dateCreated;
@@ -40,7 +40,17 @@ public class GeometricObject {
     public java.util.Date getDateCreated() {
         return dateCreated;
     }
+    public abstract double getArea();
+    public abstract double getPerimeter();
 
+    @Override
+    public int compareTo(GeometricObject o) {
+        return Double.compare(this.getArea(), o.getArea());
+    }
+
+    public static GeometricObject max(GeometricObject obj1, GeometricObject obj2) {
+        return (obj1.getArea() > obj2.getArea()) ? obj1 : obj2;
+    }
     /** Возвращает строковое представление этого объекта */
     public String toString() {
         return "создан " + dateCreated + ",\nцвет: " + color +
