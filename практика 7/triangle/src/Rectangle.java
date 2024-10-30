@@ -40,13 +40,14 @@ public class Rectangle extends GeometricObject {
         this.height = height;
     }
 
-    @Override
+    /** Возвращает площадь */
     public double getArea() {
         return width * height;
     }
 
-    @Override
+    /** Возвращает периметр */
     public double getPerimeter() {
         return 2 * (width + height);
     }
+
 }

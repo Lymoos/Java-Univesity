@@ -1,7 +1,7 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Main {
+public class Main1 {
     public static void main(String[] args) {
         String[] months = {"январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь"};
         int[] dom = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
